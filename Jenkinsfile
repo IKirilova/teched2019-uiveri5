@@ -18,7 +18,7 @@ node {
     passwordVariable: 'password',
     usernameVariable: 'username'
 )]) {
-    uiVeri5ExecuteTests script: this, testOptions: "./uiveri5/conf.js --params.user=${username} --params.pass=${password}"
+    uiVeri5ExecuteTests script: this, testOptions: "./conf.js --params.user=${username} --params.pass=${password}"
 }
  
   
