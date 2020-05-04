@@ -1,6 +1,6 @@
 exports.config = {
     profile: "integration",        
-    baseUrl: "https://caa380-uiveri5demo2.cfapps.eu10.hana.ondemand.com/index.html",
+    baseUrl: "https://uiveri5demo.internal.cfapps.sap.hana.ondemand.com/index.html",
     auth: {
       "sapcloud-form": {
         user: "${params.user}",
