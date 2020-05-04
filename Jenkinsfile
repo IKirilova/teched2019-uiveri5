@@ -13,7 +13,14 @@ node {
   deleteDir()
   
   checkout scm
-  uiVeri5ExecuteTests script: this
+  withCredentials([usernamePassword(
+    credentialsId: 'uiveri5tests',
+    passwordVariable: 'password',
+    usernameVariable: 'username'
+)]) {
+    uiVeri5ExecuteTests script: this, testOptions: "./uiveri5/conf.js --params.user=${username} --params.pass=${password}"
+}
+ 
   
   // Publish Html report
    publishHTML target: [
